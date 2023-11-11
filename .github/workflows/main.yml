@@ -23,7 +23,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build (and test) with Maven wrapper
-        run: ./mvnw -Dnative -Dquarkus.native.container-build=true
+        run: ./mvnw package -Dnative -Dquarkus.native.container-build=true
       - name: Login to DockerHub
         uses: docker/login-action@v2.1.0
         with:
