@@ -32,7 +32,6 @@ public class Main {
             importer.processDay();
             importer.processNight();
             LOG.info("Process finished at {}...", OffsetDateTime.now());
-            Quarkus.waitForExit();
             Quarkus.asyncExit();
             return 0;
         }
